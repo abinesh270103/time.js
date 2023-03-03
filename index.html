@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+	<title>Date010</title>
+<style>
+span{
+background-color:red;
+color:#fff;
+padding:10px;
+}
+</style>
+</head>
+<body>
+<p> current time<span id="sample"></span></p>
+<button onclick="alertDelay()">click</button>
+<button onclick="alertStop()">Stop</button>
+<script>
+ function abi(){
+
+ let date=new Date().toLocaleTimeString();			
+ 
+ let span=document.getElementById("sample");
+ 
+ span.innerHTML=date;
+ 
+}
+ let clear=setInterval(abi,1000);
+ 
+ function alertDelay(){
+   setTimeout(alertDisplay,2000);
+ }
+ function  alertDisplay(){
+ alert("Hello");
+ }
+ function alertStop(){
+ clearInterval(clear);
+ }
+ console.log(date);	
+</script>
+</body>
+</html>
